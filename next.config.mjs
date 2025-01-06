@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // Thêm dòng này
-    basePath: '/portfolio', // Thêm tên repository của bạn
+    output: 'export',  // Required for static HTML export
+    basePath: '/portfolio', // Your repo name
     images: {
-        unoptimized: true
+        unoptimized: true, // Required for static export
     },
-    distDir:'out',
-};
+    assetPrefix: '/portfolio/', // Your repo name with trailing slash
+ };
 
 export default nextConfig;
 
