@@ -3,6 +3,7 @@ import {Button} from './ui/button';
 import {MoonIcon, SunIcon} from '@radix-ui/react-icons';
 import { SunDim } from 'lucide-react';
 import {useTheme} from 'next-themes';
+import '../app/globals.css';
 const ThemeToggler=()=>{
     const {theme, setTheme} = useTheme();
     return (
