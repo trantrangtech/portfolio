@@ -4,7 +4,8 @@ const nextConfig = {
     basePath: '/portfolio', // Thêm tên repository của bạn
     images: {
         unoptimized: true
-    }
+    },
+    distDir:'out',
 };
 
 export default nextConfig;
