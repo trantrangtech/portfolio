@@ -20,7 +20,7 @@ const Hero = () => {
                         <div className='text-sm uppercasse font-semibold mb-4 text-primary tracking-[4px]'>
                             Odoo Developer
                         </div>
-                        <h1 class="h1 mb-4">Hello, my name is Trang Tran</h1>
+                        <h1 className="h1 mb-4">Hello, my name is Trang Tran</h1>
                         <p className='subtitle max-w-[490px] mx-auto xl:mx-0'>Brief description with insight into myself, my vocational journey, and what I engage in professionally</p>
                         <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                             <Link href='/contact'>

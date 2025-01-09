@@ -97,7 +97,7 @@ const About = () => {
     const getData=(arr,title)=>{
         return arr.find((item)=>item.title===title);
     }
-    // console.log(getData(qualificationData,'education'));
+    // console.log(process.env);
     return (
        <section className="xl:h-[860px] pb-12 xl:py-24">
             <div className="container mx-auto">
