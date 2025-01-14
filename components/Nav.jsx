@@ -8,12 +8,12 @@ const links=[
     {path:'/projects',name:'my projects'},
     {path:'/contact',name:'contact'},
 ];
-const Nav=({containerStyles,linkStyles,underlineStyles})=>{
+const Nav=({containerStyles,linkStyles,underlineStyles,onLinkClick})=>{
     const path=usePathname();
     return(
         <nav className={`${containerStyles}`}>
             {links.map((link,index)=>{
-                return <Link key={index} href={link.path} className={`capitalize ${linkStyles}`}>
+                return <Link onClick={onLinkClick} key={index} href={link.path} className={`capitalize ${linkStyles}`}>
                     {link.path===path && (
                         <motion.span
                         initial={{y:'-100%'}}
@@ -21,6 +21,7 @@ const Nav=({containerStyles,linkStyles,underlineStyles})=>{
                         transition={{type:'tween'}}
                         layoutId='underline'
                         className={`${underlineStyles}`}
+                        
                         />
                     )}
                     {link.name}

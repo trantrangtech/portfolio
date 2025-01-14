@@ -2,6 +2,7 @@ import DevImg from './DevImg';
 import Image from 'next/image';
 import {Tabs,TabsContent,TabsList,TabsTrigger} from '@/components/ui/tabs';
 import {User2,MailIcon,HomeIcon,PhoneIcon, GraduationCap,Calendar,Briefcase, PhoneCall} from 'lucide-react';
+const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
 const infoData=[
     {
         icon:<User2 size={20}/>,
@@ -87,7 +88,7 @@ const skillsData=[
         title:'tools',
         data:[
             {
-                imgPath:'/about/vscode.svg',
+                imgPath:`${basePath}/about/vscode.svg`,
             },
            
         ]
@@ -97,14 +98,14 @@ const About = () => {
     const getData=(arr,title)=>{
         return arr.find((item)=>item.title===title);
     }
-    // console.log(process.env);
+    const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
     return (
        <section className="xl:h-[860px] pb-12 xl:py-24">
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About me</h2>
                 <div className="flex flex-col  xl:flex-row">
                     <div className="hidden xl:flex flex-1 relative">
-                        <DevImg containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc='/about/developer.png'/>
+                        <DevImg containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc={`${basePath}/about/developer.png`}/>
                     </div>
                     <div className='flex-1'>
                         <Tabs defaultValue='personal'>

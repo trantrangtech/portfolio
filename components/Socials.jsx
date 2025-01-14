@@ -16,14 +16,14 @@ const icons=[
         name:<RiFacebookFill/>
     }
 ];
-const Socials =({containerStyles,iconsStyles})=>{
+const Socials =({containerStyles,iconsStyles,onLinkClick})=>{
     return (
         <div className={`${containerStyles}`}>
             {
                 icons.map((icon,index)=>{
                     console.log(icon);
                     return (
-                        <Link href={icon.path} key={index}>
+                        <Link href={icon.path} key={index} onClick={onLinkClick} >
                             <div className={`${iconsStyles}`}>{icon.name}</div>
                         </Link>
                     )
